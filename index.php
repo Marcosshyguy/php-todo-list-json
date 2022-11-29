@@ -14,7 +14,16 @@
 
 <body>
     <div id="app">
+        <div class="container">
+            <h1 class="text-center">To Do List</h1>
 
+            <div class="col-7 mx-auto">
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+            <a href="server.php">server</a>
+        </div>
     </div>
     <script src="./js/script.js"></script>
 </body>
