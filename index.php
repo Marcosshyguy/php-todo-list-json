@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>To Do List</title>
 </head>
 
@@ -27,8 +29,24 @@
                 <button @click="addToDo">Invia</button>
             </div>
 
-            <a href="server.php">server</a>
+
         </div>
+        <!-- <div class="container pt-5">
+            <h1 class="text-center">My Todo List</h1>
+            <div class="row justify-content-center">
+                <div class="col-7">
+                    <ul class="list-group">
+                        <li class="list-group-item" v-for="todo in todoList">{{ todo}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-7">
+                    <input class="form-control" type="text" placeholder="Inserisci un nuovo todo" aria-label="Inserisci un nuovo todo" v-model="newTodo">
+                    <button class="btn btn-primary mt-2" @click="addTodo">Salva</button>
+                </div>
+            </div>
+        </div> -->
     </div>
     <script src="./js/script.js"></script>
 </body>

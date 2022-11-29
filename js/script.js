@@ -9,18 +9,12 @@ createApp({
     },
     methods:{
         addToDo(){
-            // if(this.newToDo){
-            //     const NewTodoObj = {
-            //         text: this.newToDo,
-            //         done:false
-            //     }
-            // }
             const data = {
                 postParam: this.newToDo
             }
-            axios.post("server.php",data,
+            axios.post("server.php", data,
             {
-                headers:{'Content-Type': 'multipart/form-data'}
+                headers: { "Content-Type": "multipart/form-data" },
             }).then((resp) => {
                 this.answer = resp.data;
             })
@@ -33,3 +27,34 @@ createApp({
         this.answer = resp.data)
     }
 }).mount("#app")
+// const { createApp } = Vue;
+
+// createApp({
+//   data() {
+//     return {
+//       todoList: [],
+//       newTodo: "",
+//     };
+//   },
+//   created() {
+//     axios.get("server.php").then((resp) => {
+//       this.todoList = resp.data;
+//     });
+//   },
+//   methods: {
+//     addTodo() {
+//       const data = {
+//         newTodo: this.newTodo,
+//       };
+
+//       axios
+//         .post("server.php", data, {
+//           headers: { "Content-Type": "multipart/form-data" },
+//         })
+//         .then((resp) => {
+//           this.todoList = resp.data;
+//           this.newTodo = "";
+//         });
+//     },
+//   },
+// }).mount("#app");
