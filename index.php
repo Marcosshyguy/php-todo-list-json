@@ -17,11 +17,16 @@
         <div class="container">
             <h1 class="text-center">To Do List</h1>
 
-            <div class="col-7 mx-auto">
+            <div class="col-8 mx-auto">
                 <ul>
                     <li v-for="(todo, todoIndex) in answer" :key="todoIndex">{{ todo.text }}</li>
                 </ul>
             </div>
+            <div class="col-8 mx-auto">
+                <input type="text" id="new_to_do" name="" v-model="newToDo">
+                <button @click="addToDo">Invia</button>
+            </div>
+
             <a href="server.php">server</a>
         </div>
     </div>
