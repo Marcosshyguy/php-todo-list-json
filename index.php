@@ -19,7 +19,7 @@
 
             <div class="col-7 mx-auto">
                 <ul>
-                    <li></li>
+                    <li v-for="(todo, todoIndex) in answer" :key="todoIndex">{{ todo.text }}</li>
                 </ul>
             </div>
             <a href="server.php">server</a>
