@@ -21,7 +21,11 @@
 
             <div class="col-8 mx-auto">
                 <ul>
-                    <li v-for="(todo, todoIndex) in answer" :key="todoIndex">{{ todo.text }}</li>
+                    <li v-for="(todo, todoIndex) in answer" :key="todoIndex" :class="(todo.done) ? 'text-decoration-line-through' : ''" @click="toggleText(todoIndex)">{{ todo.text }}
+                        <span class="d-flex">
+                            <i class="fa-solid fa-trash" @click="removeTodo(todoIndex)"></i>
+                        </span>
+                    </li>
                 </ul>
             </div>
             <div class="col-8 mx-auto">

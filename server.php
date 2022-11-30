@@ -17,6 +17,19 @@
 
         file_put_contents("todo.json", json_encode($todo_list));
     }
+    // o elseif
+    if (isset($_POST["doneIndex"])) {
+        $todoIndex = $_POST["doneIndex"];
+
+        $todo_list[$todoIndex]["done"] = !$todo_list[$todoIndex]["done"];
+        file_put_contents("todo.json", json_encode($todo_list));
+    }
+    // o elseif
+    if (isset($_POST["deliteIndex"])) {
+        $removeIndex = $_POST["deliteIndex"];
+        array_splice($todo_list, $removeIndex, 1);
+        file_put_contents("todo.json", json_encode($todo_list));
+    }
 
     // predispongo con header il file che dovrò prendere con get ad essere covertito in linguaggio comprensibile da js con 'Content-Type: application/json
     header('Content-Type: application/json');
