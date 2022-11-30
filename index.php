@@ -28,25 +28,7 @@
                 <input type="text" id="new_to_do" name="" v-model="newToDo">
                 <button @click="addToDo">Invia</button>
             </div>
-
-
         </div>
-        <!-- <div class="container pt-5">
-            <h1 class="text-center">My Todo List</h1>
-            <div class="row justify-content-center">
-                <div class="col-7">
-                    <ul class="list-group">
-                        <li class="list-group-item" v-for="todo in todoList">{{ todo}}</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row justify-content-center mt-3">
-                <div class="col-7">
-                    <input class="form-control" type="text" placeholder="Inserisci un nuovo todo" aria-label="Inserisci un nuovo todo" v-model="newTodo">
-                    <button class="btn btn-primary mt-2" @click="addTodo">Salva</button>
-                </div>
-            </div>
-        </div> -->
     </div>
     <script src="./js/script.js"></script>
 </body>
